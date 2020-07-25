@@ -3,3 +3,29 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+.contextMenu-list li:hover{
+  color: grey;
+  cursor: pointer;
+}
+
+.toolbar-bg {
+  background: rgba(0,0,0,0);
+  position: fixed;
+  transition: 0.3s;
+}
+
+.toolbar-content {
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.toolbar-content:hover {
+  color: white;
+}
+
+.toolbar-bg:hover {
+  background: rgba(0,0,0,0.5);
+}
