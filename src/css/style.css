@@ -3,6 +3,7 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+@import '~antd/dist/antd.css';
 
 .contextMenu-list li:hover{
   color: grey;
@@ -14,6 +15,13 @@
   position: fixed;
   transition: 0.3s;
 }
+.toolbar-bg.lightmode:hover {
+  background: rgba(0,0,0,0);
+}
+
+.toolbar-bg.darkmode:hover {
+  background: rgba(255,255,255,0.5);
+}
 
 .toolbar-content {
   color: black;
@@ -22,10 +30,62 @@
   font-size: 14px;
 }
 
-.toolbar-content:hover {
+.toolbar-content.lightmode:hover {
+  color: #1A202C;
+}
+
+.toolbar-bg.lightmode:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+.toolbar-content.darkmode:hover {
   color: white;
 }
 
-.toolbar-bg:hover {
+.toolbar-bg.darkmode:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.darkmode {
+  color: white;
+  transition: 0.3s;
   background: rgba(0,0,0,0.5);
+}
+
+.lightmode {
+  color: black;
+  background: #fff;
+}
+
+.hover-menu {
+  height: 8vh;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: rgba(192,192,192,0.5);
+}
+
+.hover-menu-item {
+  margin: 0 auto;
+  width: 7vw;
+  transition: 0.3s;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-menu-icon {
+  margin: 0 auto;
+  width: 6vh;
+}
+
+.hover-menu-item:hover {
+  width: 7.5vw;
+  transform: scale(1.5) translateY(-10px);
+}
+
+.hover-menu-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom:8px;
 }
