@@ -3,6 +3,7 @@ import ContextMenu from './contextMenu';
 import ToolbarLayout from './ToolbarLayout';
 import { DesktopContext } from '../context/desktopContext';
 import HoverMenu from './HoverMenu';
+import WindowDialog from './windowDialog';
 
 const DesktopLayout = () => {
   const {desktopData} = useContext(DesktopContext)
@@ -35,6 +36,7 @@ const DesktopLayout = () => {
       <div className="p-2 h-screen" style={{background: `url(${desktopData.desktopWallpaper})`}} id="playground-container" onClick={()=>setContextMenuState(false)}>
         { isContextMenuOpen ? <ContextMenu pos={currentCursorPos}/> : '' }
       </div>
+      <WindowDialog />
       <HoverMenu />
     </ToolbarLayout>
   );
