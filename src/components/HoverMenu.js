@@ -7,6 +7,7 @@ const HoverMenu = () => {
   const {desktopData, dispatch} = useContext(DesktopContext)
   const toggleAppOpen = (id) => {
     dispatch({type: 'SET_MENU_OPEN', id, isOpen: true})
+    dispatch({type: 'SET_MENU_MINIMIZE', id})
   }
   return ( 
     <div className="hover-menu-wrapper">

@@ -16,6 +16,10 @@ const WindowDialog = () => {
     dispatch({type: 'SET_MENU_ACTIVE', id, isActive: true})
   }
 
+  const toggleMinimizeApp = (id) => {
+    dispatch({type: 'SET_MENU_MINIMIZE', id})
+  }
+
   useEffect(() => {
     gsap.registerPlugin(Draggable);
   }, []);
@@ -31,12 +35,13 @@ const WindowDialog = () => {
     <div>
       { desktopData.appList.map((dialog, index) => {
         return (
+          // will change this later so the rendered content would not be re-render
           dialog.isOpen ? 
-            <div className={`window-dialog ${dialog.isActive ? 'window-dialog-active' : null} ${desktopData.themeClass} ${dialog.isMaximize ? 'window-dialog-maximize' : null}`} key={index}>
+            <div className={`window-dialog ${dialog.isActive ? 'window-dialog-active' : null} ${desktopData.themeClass} ${dialog.isMaximize ? 'window-dialog-maximize' : null} ${dialog.isMinimize ? 'invisible' : 'visible'}`} key={index}>
               <div className={`flex window-dialog-toolbar  ${dialog.isActive ? 'window-dialog-toolbar-active' : ''} align-middle justify-between ${desktopData.themeClass}`} onClick={() => toggleActiveOpenApp(dialog.id)}>
                 <div className={`flex window-dialog-toolbar-icon text-center align-middle justify-between items-center p-2`}>
                   <div className={`flex-col window-dialog-toolbar-icon-set toolbar-icon-close p-2 ml-1`} onClick={(() => closeOpenApp(dialog.id))}></div>
-                  <div className={`flex-col window-dialog-toolbar-icon-set toolbar-icon-minimize p-2 ml-1`}></div>
+                  <div className={`flex-col window-dialog-toolbar-icon-set toolbar-icon-minimize p-2 ml-1`} onClick={() => toggleMinimizeApp(dialog.id)}></div>
                   <div className={`flex-col window-dialog-toolbar-icon-set toolbar-icon-maximize p-2 ml-1`} onClick={() => toggleMaximizeOpenApp(dialog.id)}></div>
                 </div>
                 <div className={`flex window-dialog-toolbar-title text-center align-middle justify-between items-center p-2}`}>

@@ -12,7 +12,7 @@ export const initialState = {
     action: '',
     content: 'dialog content',
     isOpen: false,
-    isMinimize: false,
+    isMinimize: true,
     isMaximize: false,
     isActive: false,
   },
@@ -23,7 +23,7 @@ export const initialState = {
     action: '',
     content: 'dialog content',
     isOpen: false,
-    isMinimize: false,
+    isMinimize: true,
     isMaximize: false,
     isActive: false,
   },
@@ -34,7 +34,7 @@ export const initialState = {
     action: '',
     content: 'dialog content',
     isOpen: false,
-    isMinimize: false,
+    isMinimize: true,
     isMaximize: false,
     isActive: false,
   }],
@@ -80,7 +80,7 @@ export const desktopReducer = (state = initialState, action) => {
     case 'SET_MENU_MINIMIZE':
         state.appList = appList.map((menu) => {
           if (menu.id === action.id) {
-            menu.isMinimize = action.isMinimize
+            menu.isMinimize = !menu.isMinimize
           }
           return menu
         })

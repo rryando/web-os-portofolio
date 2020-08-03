@@ -112,7 +112,6 @@
   transform: translate(-50%,-50%);
   border-radius: 5px;
   background: rgb(192,192,192);
-  transition: 0.3s;
 }
 
 .window-dialog-maximize {
@@ -123,6 +122,7 @@
 	height:100vh !important;
   top: 0;
   left: 0;
+  transition: 0.3s;
 }
 
 .window-dialog-toolbar {
@@ -136,7 +136,6 @@
   border-radius: 50%;
   height: 15px;
   width: 15px;
-  transition: 0.3s;
   cursor: pointer;
 }
 
