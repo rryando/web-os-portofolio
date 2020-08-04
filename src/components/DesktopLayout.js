@@ -4,6 +4,8 @@ import ToolbarLayout from './ToolbarLayout';
 import { DesktopContext } from '../context/desktopContext';
 import HoverMenu from './HoverMenu';
 import WindowDialog from './windowDialog';
+import {isMobile} from '../utils/check-mobile';
+import StickyNote from './AppList/StickyNote';
 
 const DesktopLayout = () => {
   const {desktopData} = useContext(DesktopContext)
@@ -23,6 +25,7 @@ const DesktopLayout = () => {
     e.preventDefault();
   }
   useEffect(() => {
+    console.log(isMobile);
     const containerDOM = document.getElementById('playground-container')
     if (!isEventInjected) {
       containerDOM.addEventListener('contextmenu', e => customContextMenuHandler(e), false);
@@ -36,6 +39,7 @@ const DesktopLayout = () => {
       <div className="p-2 h-screen" style={{background: `url(${desktopData.desktopWallpaper})`}} id="playground-container" onClick={()=>setContextMenuState(false)}>
         { isContextMenuOpen ? <ContextMenu pos={currentCursorPos}/> : '' }
       </div>
+      <StickyNote />
       <WindowDialog />
       <HoverMenu />
     </ToolbarLayout>
