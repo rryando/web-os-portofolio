@@ -166,7 +166,7 @@
 }
 
 .sticky-note-dialog {
-  resize: vertical;
+  resize: both;
   overflow:auto;
   min-width: 20vw;
   min-height: 20vh;
