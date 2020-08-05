@@ -180,7 +180,7 @@
 .sticky-note-dialog {
   position: absolute;
   resize: both;
-  /* overflow: auto; */
+  overflow: hidden;
   min-width: 10vw;
   min-height: 10vh;
   width: 30vw;

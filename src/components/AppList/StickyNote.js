@@ -44,7 +44,7 @@ const StickyNote = () => {
     <div>
       {noteList.map((note, index) => {
         return (
-          <div className={`fixed sticky-note-dialog ${note.isActive ? 'sticky-note-dialog-active' : ''}`} key={index} onClick={() => setActiveNote(note.id)}>
+          <div className={`fixed sticky-note-dialog ${note.isActive ? 'sticky-note-dialog-active disable-overflow' : 'enable-overflow'}`} key={index} onClick={() => setActiveNote(note.id)}>
             <div className={`flex px-1 sticky-note-toolbar ${note.isActive ? 'sticky-note-toolbar-active' : ''}`}>
               <div className="flex-1 text-left">
                 <CloseOutlined className="text-center align-middle" />
