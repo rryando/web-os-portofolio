@@ -1,0 +1,29 @@
+.rdw-storybook-toolbar-absolute {
+  position: fixed;
+  top: -24px;
+  width: 56px;
+  right: -8vw;
+}
+
+.rdw-storybook-wrapper-sticky.rdw-editor-main>div>div>div>div>.public-DraftStyleDefault-block {
+  margin: 0;
+}
+
+.public-DraftStyleDefault-block {
+  margin: 0 !important;
+}
+
+/* .rdw-storybook-toolbar-absolute>div.rdw-inline-wrapper>.rdw-option-wrapper {
+  color: white;
+  background: #434343;
+  border: 1px solid #232323;
+}
+
+.rdw-storybook-wrapper-floating {
+
+}
+
+.rdw-storybook-wrapper-margined {
+  margin-top: 100px;
+  position: relative;
+} */
