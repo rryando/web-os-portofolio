@@ -6,7 +6,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "antd": "^4.4.3",
-    "gatsby": "2.24.11",
+    "gatsby": "4.25.7",
     "gatsby-plugin-manifest": "2.4.21",
     "gatsby-plugin-offline": "3.2.20",
     "gatsby-plugin-postcss": "2.3.11",
